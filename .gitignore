@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Python
+ml-service/venv/
+__pycache__/
+*.pyc
+*.pkl
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Build outputs
+dist/
+.next/
+out/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Prisma
+server/prisma/migrations/*
+!server/prisma/migrations/.gitkeep
+
+# Logs
+*.log
+
+# Setup script (not needed in repo)
+setup.bat

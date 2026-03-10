@@ -1,0 +1,20 @@
+{
+    "name": "career-counselling-portal",
+    "version": "1.0.0",
+    "private": true,
+    "description": "AI-Powered Career Counselling & Guidance Portal for Schools — SIH 2024 + NEP 2020 Aligned",
+    "scripts": {
+        "dev:client": "cd client && npm run dev",
+        "dev:server": "cd server && npm run dev",
+        "dev:ml": "cd ml-service && .\\venv\\Scripts\\python -m uvicorn app.main:app --reload --port 8000",
+        "dev": "npx concurrently \"npm run dev:client\" \"npm run dev:server\" \"npm run dev:ml\"",
+        "docker:up": "docker compose up -d",
+        "docker:down": "docker compose down",
+        "db:migrate": "cd server && npx prisma migrate dev",
+        "db:seed": "cd server && npx prisma db seed",
+        "db:studio": "cd server && npx prisma studio"
+    },
+    "devDependencies": {
+        "concurrently": "^9.2.1"
+    }
+}
