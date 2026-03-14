@@ -1,0 +1,32 @@
+{
+  "R": {
+    "name": "Realistic",
+    "description": "You enjoy working with tools, machines, and physical activities. You prefer hands-on, practical tasks.",
+    "careers": ["Mechanical Engineer", "Civil Engineer", "Architect", "Defence Officer (Indian Armed Forces)", "Airline Pilot", "Chef / Culinary Arts"]
+  },
+  "I": {
+    "name": "Investigative",
+    "description": "You enjoy research, analysis, and solving complex problems. You're curious and methodical.",
+    "careers": ["Software Engineer", "Data Scientist", "AI/ML Engineer", "Doctor (MBBS)", "Environmental Scientist", "Biomedical Engineer"]
+  },
+  "A": {
+    "name": "Artistic",
+    "description": "You enjoy creative expression, design, and originality. You value aesthetics and imagination.",
+    "careers": ["UX/UI Designer", "Graphic Designer", "Fashion Designer", "Film Director", "Content Writer", "Architect"]
+  },
+  "S": {
+    "name": "Social",
+    "description": "You enjoy helping, teaching, and counselling others. You're empathetic and communicative.",
+    "careers": ["Clinical Psychologist", "Physiotherapist", "Doctor (MBBS)", "IAS Officer", "Journalist", "Sports Manager"]
+  },
+  "E": {
+    "name": "Enterprising",
+    "description": "You enjoy leading, persuading, and managing. You're ambitious and goal-oriented.",
+    "careers": ["Management Consultant", "Investment Banker", "Entrepreneur", "Product Manager", "Digital Marketing Manager", "Corporate Lawyer"]
+  },
+  "C": {
+    "name": "Conventional",
+    "description": "You enjoy organizing data, following procedures, and systematic work. You're detail-oriented.",
+    "careers": ["Chartered Accountant", "Civil Lawyer", "Cybersecurity Analyst", "Cloud Architect", "Pharmacist", "Dentist"]
+  }
+}

@@ -1,11 +1,417 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextSearch"]
 }
 
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+// =================== ENUMS ===================
+
+enum Role {
+  STUDENT
+  COUNSELLOR
+  MENTOR
+  PARENT
+  ADMIN
+}
+
+enum Gender {
+  MALE
+  FEMALE
+  OTHER
+  PREFER_NOT_TO_SAY
+}
+
+enum EducationLevel {
+  CLASS_9
+  CLASS_10
+  CLASS_11
+  CLASS_12
+  UNDERGRADUATE
+  POSTGRADUATE
+  OTHER
+}
+
+enum Stream {
+  SCIENCE_PCM
+  SCIENCE_PCB
+  COMMERCE
+  ARTS_HUMANITIES
+  VOCATIONAL
+  NOT_DECIDED
+  OTHER
+}
+
+enum AppointmentStatus {
+  PENDING
+  CONFIRMED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+  NO_SHOW
+}
+
+enum AssessmentType {
+  APTITUDE
+  PERSONALITY_BIG_FIVE
+  INTEREST_RIASEC
+  SKILL_BASED
+  COMPREHENSIVE
+}
+
+enum QuestionType {
+  MULTIPLE_CHOICE
+  RATING_SCALE
+  YES_NO
+  RANKING
+  OPEN_ENDED
+}
+
+enum NotificationType {
+  APPOINTMENT
+  ASSESSMENT_RESULT
+  MENTOR_RESPONSE
+  SYSTEM
+  REMINDER
+}
+
+enum ResourceType {
+  ARTICLE
+  VIDEO
+  COURSE
+  BOOK
+  TOOL
+  WEBINAR
+  SCHOLARSHIP
+}
+
+// =================== MODELS ===================
+
+model User {
+  id              String    @id @default(cuid())
+  email           String    @unique
+  passwordHash    String?
+  firstName       String
+  lastName        String
+  phone           String?
+  avatar          String?
+  gender          Gender?
+  dateOfBirth     DateTime?
+  role            Role      @default(STUDENT)
+  isEmailVerified Boolean   @default(false)
+  isActive        Boolean   @default(true)
+  lastLoginAt     DateTime?
+  oauthProvider   String?
+  oauthId         String?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  studentProfile           StudentProfile?
+  counsellorProfile        CounsellorProfile?
+  parentProfile            ParentProfile?
+  appointmentsAsStudent    Appointment[]       @relation("StudentAppointments")
+  appointmentsAsCounsellor Appointment[]       @relation("CounsellorAppointments")
+  assessmentAttempts       AssessmentAttempt[]
+  savedCareers             SavedCareer[]
+  notifications            Notification[]
+  activityLogs             ActivityLog[]
+  reviewsGiven             MentorReview[]      @relation("ReviewAuthor")
+  reviewsReceived          MentorReview[]      @relation("ReviewTarget")
+  resumes                  Resume[]
+
+  @@index([email])
+  @@index([role])
+  @@index([isActive])
+}
+
+model Resume {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title      String   @default("My Resume")
+  template   String   @default("classic")
+  data       Json
+  isDefault  Boolean  @default(false)
+  lastEdited DateTime @default(now())
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([userId])
+}
+
+model StudentProfile {
+  id               String         @id @default(cuid())
+  userId           String         @unique
+  user             User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  educationLevel   EducationLevel?
+  stream           Stream?
+  institution      String?
+  board            String?
+  percentage       Float?
+  skills           String[]
+  interests        String[]
+  hobbies          String[]
+  preferredCareers String[]
+  languagesKnown   String[]
+  extracurriculars String[]
+  resumeUrl        String?
+  linkedinUrl      String?
+  city             String?
+  state            String?
+  parentId         String?
+  profileCompletion Int           @default(0)
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+}
+
+model CounsellorProfile {
+  id              String    @id @default(cuid())
+  userId          String    @unique
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  specializations String[]
+  qualifications  String[]
+  certifications  String[]
+  experienceYears Int
+  bio             String?   @db.Text
+  hourlyRate      Float?
+  rating          Float     @default(0)
+  totalSessions   Int       @default(0)
+  totalReviews    Int       @default(0)
+  availableSlots  Json?
+  isVerified      Boolean   @default(false)
+  verifiedAt      DateTime?
+  linkedinUrl     String?
+  organization    String?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
+model ParentProfile {
+  id          String   @id @default(cuid())
+  userId      String   @unique
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  childrenIds String[]
+  occupation  String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Career {
+  id               String  @id @default(cuid())
+  title            String
+  slug             String  @unique
+  description      String  @db.Text
+  shortDescription String  @db.VarChar(300)
+  category         String
+  subCategory      String?
+  averageSalary    Json
+  requiredSkills   String[]
+  requiredEducation String[]
+  eligibility      String?  @db.Text
+  entranceExams    String[]
+  topColleges      String[]
+  topCompanies     String[]
+  growthOutlook    String
+  demandLevel      String
+  workLifeBalance  Int?
+  jobSatisfaction  Int?
+  dayInLife        String?  @db.Text
+  riasecCodes      String[]
+  requiredTraits   Json?
+  imageUrl         String?
+  iconName         String?
+  roadmapSteps     Json?
+  relatedCareers   String[]
+  resources        Json?
+  isPublished      Boolean  @default(true)
+  viewCount        Int      @default(0)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  savedBy SavedCareer[]
+
+  @@index([category])
+  @@index([slug])
+  @@index([isPublished])
+}
+
+model Assessment {
+  id           String         @id @default(cuid())
+  title        String
+  description  String?        @db.Text
+  type         AssessmentType
+  duration     Int
+  totalMarks   Int?
+  passingMarks Int?
+  instructions String?        @db.Text
+  isActive     Boolean        @default(true)
+  order        Int            @default(0)
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+
+  questions Question[]
+  attempts  AssessmentAttempt[]
+}
+
+model Question {
+  id            String       @id @default(cuid())
+  assessmentId  String
+  assessment    Assessment   @relation(fields: [assessmentId], references: [id], onDelete: Cascade)
+  questionText  String       @db.Text
+  type          QuestionType
+  options       Json?
+  correctAnswer String?
+  category      String?
+  weight        Float        @default(1)
+  explanation   String?      @db.Text
+  order         Int          @default(0)
+  createdAt     DateTime     @default(now())
+
+  @@index([assessmentId])
+}
+
+model AssessmentAttempt {
+  id                 String     @id @default(cuid())
+  userId             String
+  user               User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  assessmentId       String
+  assessment         Assessment @relation(fields: [assessmentId], references: [id])
+  answers            Json
+  score              Float?
+  maxScore           Float?
+  percentile         Float?
+  categoryScores     Json?
+  personalityTraits  Json?
+  riasecProfile      Json?
+  recommendedCareers Json?
+  skillGaps          Json?
+  completedAt        DateTime?
+  timeTaken          Int?
+  createdAt          DateTime   @default(now())
+
+  @@index([userId])
+  @@index([assessmentId])
+}
+
+model Appointment {
+  id           String            @id @default(cuid())
+  studentId    String
+  student      User              @relation("StudentAppointments", fields: [studentId], references: [id])
+  counsellorId String
+  counsellor   User              @relation("CounsellorAppointments", fields: [counsellorId], references: [id])
+  scheduledAt  DateTime
+  duration     Int               @default(30)
+  status       AppointmentStatus @default(PENDING)
+  meetingLink  String?
+  topic        String?
+  notes        String?           @db.Text
+  feedback     String?           @db.Text
+  rating       Int?
+  cancelReason String?
+  reminderSent Boolean           @default(false)
+  createdAt    DateTime          @default(now())
+  updatedAt    DateTime          @updatedAt
+
+  @@index([studentId])
+  @@index([counsellorId])
+  @@index([scheduledAt])
+  @@index([status])
+}
+
+model Resource {
+  id          String       @id @default(cuid())
+  title       String
+  description String?      @db.Text
+  type        ResourceType
+  url         String?
+  category    String
+  tags        String[]
+  imageUrl    String?
+  provider    String?
+  difficulty  String?
+  isFeatured  Boolean      @default(false)
+  isFree      Boolean      @default(true)
+  viewCount   Int          @default(0)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  @@index([category])
+  @@index([type])
+}
+
+model SavedCareer {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  careerId  String
+  career    Career   @relation(fields: [careerId], references: [id], onDelete: Cascade)
+  notes     String?
+  createdAt DateTime @default(now())
+
+  @@unique([userId, careerId])
+}
+
+model Notification {
+  id        String           @id @default(cuid())
+  userId    String
+  user      User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title     String
+  message   String
+  type      NotificationType
+  isRead    Boolean          @default(false)
+  link      String?
+  metadata  Json?
+  createdAt DateTime         @default(now())
+
+  @@index([userId, isRead])
+  @@index([createdAt])
+}
+
+model ActivityLog {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  action    String
+  entity    String?
+  entityId  String?
+  metadata  Json?
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([createdAt])
+}
+
+model MentorReview {
+  id         String   @id @default(cuid())
+  authorId   String
+  author     User     @relation("ReviewAuthor", fields: [authorId], references: [id])
+  mentorId   String
+  mentor     User     @relation("ReviewTarget", fields: [mentorId], references: [id])
+  rating     Int
+  comment    String?  @db.Text
+  isVerified Boolean  @default(false)
+  createdAt  DateTime @default(now())
+
+  @@unique([authorId, mentorId])
+  @@index([mentorId])
+}
+
+model ContactInquiry {
+  id         String    @id @default(cuid())
+  name       String
+  email      String
+  subject    String
+  message    String    @db.Text
+  isResolved Boolean   @default(false)
+  resolvedBy String?
+  resolvedAt DateTime?
+  createdAt  DateTime  @default(now())
+}
+
+model SiteSettings {
+  id   String @id @default("main")
+  data Json
 }

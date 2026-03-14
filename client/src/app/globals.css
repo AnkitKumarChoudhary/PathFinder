@@ -1,27 +1,188 @@
+/* ===== FONT IMPORTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ===== BASE LAYER ===== */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    @apply font-body text-charcoal bg-brand-cream;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  .dark body,
+  body.dark {
+    @apply bg-dark-bg text-dark-text;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold text-charcoal;
+  }
+
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    @apply text-dark-text;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted/30 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted/50;
+  }
+
+  ::selection {
+    @apply bg-brand-mint/40 text-charcoal;
+  }
+
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-forest;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* ===== COMPONENT LAYER ===== */
+@layer components {
+  .section-container {
+    @apply max-w-content mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  .card-base {
+    @apply bg-surface rounded-2xl shadow-card border border-border/50 transition-all duration-300 ease-smooth;
+  }
+
+  .card-base:hover {
+    @apply shadow-card-hover;
+  }
+
+  .dark .card-base {
+    @apply bg-dark-surface border-dark-border;
+  }
+
+  .card-accent-left {
+    @apply card-base border-l-4;
+  }
+
+  .card-glass {
+    @apply backdrop-blur-md bg-surface/80 rounded-2xl border border-border/30 shadow-soft;
+  }
+
+  .dark .card-glass {
+    @apply bg-dark-surface/80 border-dark-border/30;
+  }
+
+  .bg-dots {
+    background-image: radial-gradient(circle, #DEE2E6 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .dark .bg-dots {
+    background-image: radial-gradient(circle, #2E3246 1px, transparent 1px);
+  }
+
+  .text-gradient-forest {
+    @apply bg-clip-text text-transparent bg-gradient-forest;
+  }
+
+  .text-gradient-sand {
+    @apply bg-clip-text text-transparent bg-gradient-sand;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-body-sm font-medium transition-colors duration-200;
+  }
+
+  .badge-forest {
+    @apply badge bg-brand-forest/10 text-brand-forest;
+  }
+
+  .badge-terracotta {
+    @apply badge bg-brand-terracotta/10 text-brand-terracotta;
+  }
+
+  .badge-sand {
+    @apply badge bg-brand-sand/10 text-charcoal;
+  }
+
+  .badge-mint {
+    @apply badge bg-brand-mint/20 text-brand-forest;
+  }
+
+  .dark .badge-forest {
+    @apply bg-brand-forest/20 text-brand-mint;
+  }
+
+  .stat-number {
+    @apply font-mono font-bold text-brand-sand;
+  }
+
+  .section-title {
+    @apply font-heading text-heading-1 md:text-display text-charcoal;
+  }
+
+  .dark .section-title {
+    @apply text-dark-text;
+  }
+
+  .section-subtitle {
+    @apply text-body-lg text-muted max-w-prose-wide;
+  }
+
+  .skeleton {
+    @apply bg-border/50 rounded-lg animate-pulse;
+  }
+
+  .dark .skeleton {
+    @apply bg-dark-border;
+  }
 }
 
+/* ===== UTILITY LAYER ===== */
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .transition-default {
+    @apply transition-all duration-300 ease-smooth;
   }
 }

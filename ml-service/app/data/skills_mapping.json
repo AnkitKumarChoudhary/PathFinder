@@ -1,0 +1,206 @@
+{
+  "Software Engineer": {
+    "required_skills": ["Programming", "Data Structures", "Algorithms", "System Design", "Git", "Problem Solving"],
+    "riasec_codes": ["I", "R"],
+    "key_traits": {"openness": "high", "conscientiousness": "high"},
+    "aptitude_weights": {"logical": 0.35, "numerical": 0.30, "verbal": 0.15, "spatial": 0.20}
+  },
+  "Data Scientist": {
+    "required_skills": ["Statistics", "Python", "Machine Learning", "Data Visualization", "SQL", "Critical Thinking"],
+    "riasec_codes": ["I"],
+    "key_traits": {"openness": "high", "conscientiousness": "high"},
+    "aptitude_weights": {"logical": 0.30, "numerical": 0.35, "verbal": 0.15, "spatial": 0.20}
+  },
+  "AI/ML Engineer": {
+    "required_skills": ["Python", "Deep Learning", "Model Deployment", "Linear Algebra", "MLOps", "Cloud"],
+    "riasec_codes": ["I", "R"],
+    "key_traits": {"openness": "high", "conscientiousness": "high"},
+    "aptitude_weights": {"logical": 0.34, "numerical": 0.33, "verbal": 0.13, "spatial": 0.20}
+  },
+  "Cybersecurity Analyst": {
+    "required_skills": ["Network Security", "Threat Analysis", "Incident Response", "Linux", "SIEM", "Attention to Detail"],
+    "riasec_codes": ["I", "C"],
+    "key_traits": {"conscientiousness": "high", "neuroticism": "low"},
+    "aptitude_weights": {"logical": 0.33, "numerical": 0.27, "verbal": 0.15, "spatial": 0.25}
+  },
+  "Cloud Architect": {
+    "required_skills": ["Cloud Platforms", "Architecture Design", "Networking", "DevOps", "Automation", "Security"],
+    "riasec_codes": ["I", "C"],
+    "key_traits": {"conscientiousness": "high", "openness": "medium"},
+    "aptitude_weights": {"logical": 0.31, "numerical": 0.28, "verbal": 0.16, "spatial": 0.25}
+  },
+  "Mechanical Engineer": {
+    "required_skills": ["CAD", "Mechanics", "Thermodynamics", "Manufacturing", "Material Science", "Problem Solving"],
+    "riasec_codes": ["R", "I"],
+    "key_traits": {"conscientiousness": "high", "openness": "medium"},
+    "aptitude_weights": {"logical": 0.27, "numerical": 0.27, "verbal": 0.10, "spatial": 0.36}
+  },
+  "Civil Engineer": {
+    "required_skills": ["Structural Analysis", "Surveying", "AutoCAD", "Project Planning", "Construction Management", "Quality Control"],
+    "riasec_codes": ["R", "C"],
+    "key_traits": {"conscientiousness": "high", "agreeableness": "medium"},
+    "aptitude_weights": {"logical": 0.27, "numerical": 0.28, "verbal": 0.12, "spatial": 0.33}
+  },
+  "Doctor (MBBS)": {
+    "required_skills": ["Biology", "Chemistry", "Empathy", "Communication", "Decision Making"],
+    "riasec_codes": ["I", "S"],
+    "key_traits": {"agreeableness": "high", "conscientiousness": "high"},
+    "aptitude_weights": {"logical": 0.20, "numerical": 0.25, "verbal": 0.35, "spatial": 0.20}
+  },
+  "Dentist": {
+    "required_skills": ["Oral Anatomy", "Patient Care", "Hand Dexterity", "Diagnosis", "Hygiene", "Communication"],
+    "riasec_codes": ["I", "S", "C"],
+    "key_traits": {"agreeableness": "high", "conscientiousness": "high"},
+    "aptitude_weights": {"logical": 0.20, "numerical": 0.22, "verbal": 0.30, "spatial": 0.28}
+  },
+  "Pharmacist": {
+    "required_skills": ["Pharmacology", "Drug Safety", "Record Keeping", "Patient Counselling", "Chemistry", "Attention to Detail"],
+    "riasec_codes": ["I", "C"],
+    "key_traits": {"conscientiousness": "high", "agreeableness": "medium"},
+    "aptitude_weights": {"logical": 0.24, "numerical": 0.24, "verbal": 0.28, "spatial": 0.24}
+  },
+  "Biomedical Engineer": {
+    "required_skills": ["Biomedical Systems", "Electronics", "Signal Processing", "Prototyping", "Research", "Regulatory Basics"],
+    "riasec_codes": ["I", "R"],
+    "key_traits": {"openness": "high", "conscientiousness": "high"},
+    "aptitude_weights": {"logical": 0.28, "numerical": 0.27, "verbal": 0.15, "spatial": 0.30}
+  },
+  "Clinical Psychologist": {
+    "required_skills": ["Counselling", "Psychometrics", "Active Listening", "Case Formulation", "Report Writing", "Empathy"],
+    "riasec_codes": ["S", "I"],
+    "key_traits": {"agreeableness": "high", "openness": "high"},
+    "aptitude_weights": {"logical": 0.20, "numerical": 0.15, "verbal": 0.40, "spatial": 0.25}
+  },
+  "Physiotherapist": {
+    "required_skills": ["Anatomy", "Rehabilitation", "Exercise Therapy", "Patient Motivation", "Assessment", "Documentation"],
+    "riasec_codes": ["S", "R"],
+    "key_traits": {"agreeableness": "high", "conscientiousness": "high"},
+    "aptitude_weights": {"logical": 0.20, "numerical": 0.20, "verbal": 0.30, "spatial": 0.30}
+  },
+  "Chartered Accountant": {
+    "required_skills": ["Accounting", "Taxation", "Auditing", "Financial Reporting", "Compliance", "Analytical Skills"],
+    "riasec_codes": ["C", "E", "I"],
+    "key_traits": {"conscientiousness": "high", "neuroticism": "low"},
+    "aptitude_weights": {"logical": 0.30, "numerical": 0.40, "verbal": 0.15, "spatial": 0.15}
+  },
+  "Investment Banker": {
+    "required_skills": ["Financial Modeling", "Valuation", "Presentation", "Negotiation", "Excel", "Market Analysis"],
+    "riasec_codes": ["E", "C", "I"],
+    "key_traits": {"extraversion": "high", "conscientiousness": "high"},
+    "aptitude_weights": {"logical": 0.28, "numerical": 0.35, "verbal": 0.22, "spatial": 0.15}
+  },
+  "Management Consultant": {
+    "required_skills": ["Problem Structuring", "Data Analysis", "Client Communication", "Presentation", "Strategy", "Stakeholder Management"],
+    "riasec_codes": ["E", "I", "S"],
+    "key_traits": {"openness": "high", "extraversion": "high"},
+    "aptitude_weights": {"logical": 0.30, "numerical": 0.25, "verbal": 0.30, "spatial": 0.15}
+  },
+  "Digital Marketing Manager": {
+    "required_skills": ["SEO", "Performance Marketing", "Content Strategy", "Analytics", "Campaign Management", "Communication"],
+    "riasec_codes": ["E", "A"],
+    "key_traits": {"openness": "high", "extraversion": "medium"},
+    "aptitude_weights": {"logical": 0.20, "numerical": 0.20, "verbal": 0.40, "spatial": 0.20}
+  },
+  "Product Manager": {
+    "required_skills": ["Product Thinking", "User Research", "Roadmapping", "Prioritization", "Communication", "Data Analysis"],
+    "riasec_codes": ["E", "I"],
+    "key_traits": {"openness": "high", "conscientiousness": "high"},
+    "aptitude_weights": {"logical": 0.30, "numerical": 0.22, "verbal": 0.28, "spatial": 0.20}
+  },
+  "Entrepreneur": {
+    "required_skills": ["Opportunity Sensing", "Sales", "Leadership", "Risk Taking", "Execution", "Networking"],
+    "riasec_codes": ["E", "A", "S"],
+    "key_traits": {"extraversion": "high", "openness": "high"},
+    "aptitude_weights": {"logical": 0.25, "numerical": 0.20, "verbal": 0.35, "spatial": 0.20}
+  },
+  "Corporate Lawyer": {
+    "required_skills": ["Contract Drafting", "Corporate Law", "Negotiation", "Legal Research", "Client Advisory", "Compliance"],
+    "riasec_codes": ["E", "C", "I"],
+    "key_traits": {"conscientiousness": "high", "agreeableness": "medium"},
+    "aptitude_weights": {"logical": 0.30, "numerical": 0.15, "verbal": 0.40, "spatial": 0.15}
+  },
+  "Civil Lawyer": {
+    "required_skills": ["Litigation", "Public Speaking", "Legal Writing", "Case Strategy", "Negotiation", "Client Counselling"],
+    "riasec_codes": ["E", "S", "I"],
+    "key_traits": {"extraversion": "medium", "conscientiousness": "high"},
+    "aptitude_weights": {"logical": 0.28, "numerical": 0.12, "verbal": 0.45, "spatial": 0.15}
+  },
+  "UX/UI Designer": {
+    "required_skills": ["User Research", "Wireframing", "Visual Design", "Prototyping", "Figma", "Design Thinking"],
+    "riasec_codes": ["A", "I", "S"],
+    "key_traits": {"openness": "high", "agreeableness": "medium"},
+    "aptitude_weights": {"logical": 0.20, "numerical": 0.10, "verbal": 0.25, "spatial": 0.45}
+  },
+  "Graphic Designer": {
+    "required_skills": ["Typography", "Branding", "Illustration", "Layout", "Photoshop", "Creativity"],
+    "riasec_codes": ["A", "R"],
+    "key_traits": {"openness": "high", "conscientiousness": "medium"},
+    "aptitude_weights": {"logical": 0.15, "numerical": 0.10, "verbal": 0.25, "spatial": 0.50}
+  },
+  "Architect": {
+    "required_skills": ["Architectural Design", "CAD", "Spatial Planning", "Sustainability", "Presentation", "Project Coordination"],
+    "riasec_codes": ["A", "R", "I"],
+    "key_traits": {"openness": "high", "conscientiousness": "high"},
+    "aptitude_weights": {"logical": 0.20, "numerical": 0.20, "verbal": 0.15, "spatial": 0.45}
+  },
+  "Fashion Designer": {
+    "required_skills": ["Fashion Illustration", "Textile Knowledge", "Pattern Making", "Trend Analysis", "Color Theory", "Brand Sense"],
+    "riasec_codes": ["A", "E"],
+    "key_traits": {"openness": "high", "extraversion": "medium"},
+    "aptitude_weights": {"logical": 0.12, "numerical": 0.08, "verbal": 0.25, "spatial": 0.55}
+  },
+  "Journalist": {
+    "required_skills": ["Reporting", "Writing", "Research", "Interviewing", "Fact Checking", "Storytelling"],
+    "riasec_codes": ["A", "S", "E"],
+    "key_traits": {"openness": "high", "extraversion": "high"},
+    "aptitude_weights": {"logical": 0.18, "numerical": 0.07, "verbal": 0.55, "spatial": 0.20}
+  },
+  "Film Director": {
+    "required_skills": ["Storytelling", "Shot Composition", "Direction", "Team Leadership", "Editing Sense", "Creative Vision"],
+    "riasec_codes": ["A", "E", "S"],
+    "key_traits": {"openness": "high", "extraversion": "medium"},
+    "aptitude_weights": {"logical": 0.14, "numerical": 0.06, "verbal": 0.30, "spatial": 0.50}
+  },
+  "Content Writer": {
+    "required_skills": ["Writing", "SEO", "Research", "Editing", "Audience Analysis", "Content Planning"],
+    "riasec_codes": ["A", "I"],
+    "key_traits": {"openness": "high", "conscientiousness": "medium"},
+    "aptitude_weights": {"logical": 0.15, "numerical": 0.05, "verbal": 0.60, "spatial": 0.20}
+  },
+  "IAS Officer": {
+    "required_skills": ["Public Administration", "Policy Analysis", "Decision Making", "Leadership", "Communication", "Ethics"],
+    "riasec_codes": ["S", "E", "I"],
+    "key_traits": {"conscientiousness": "high", "agreeableness": "high"},
+    "aptitude_weights": {"logical": 0.25, "numerical": 0.20, "verbal": 0.35, "spatial": 0.20}
+  },
+  "Defence Officer (Indian Armed Forces)": {
+    "required_skills": ["Leadership", "Physical Stamina", "Tactical Thinking", "Discipline", "Risk Assessment", "Communication"],
+    "riasec_codes": ["R", "E", "S"],
+    "key_traits": {"conscientiousness": "high", "neuroticism": "low"},
+    "aptitude_weights": {"logical": 0.25, "numerical": 0.20, "verbal": 0.20, "spatial": 0.35}
+  },
+  "Environmental Scientist": {
+    "required_skills": ["Ecology", "Data Analysis", "Field Research", "GIS", "Report Writing", "Sustainability"],
+    "riasec_codes": ["I", "R"],
+    "key_traits": {"openness": "high", "conscientiousness": "high"},
+    "aptitude_weights": {"logical": 0.28, "numerical": 0.22, "verbal": 0.20, "spatial": 0.30}
+  },
+  "Sports Manager": {
+    "required_skills": ["Event Management", "Sponsorship", "Negotiation", "Branding", "Operations", "Leadership"],
+    "riasec_codes": ["E", "S"],
+    "key_traits": {"extraversion": "high", "conscientiousness": "high"},
+    "aptitude_weights": {"logical": 0.22, "numerical": 0.16, "verbal": 0.37, "spatial": 0.25}
+  },
+  "Chef / Culinary Arts": {
+    "required_skills": ["Cooking Techniques", "Menu Planning", "Kitchen Operations", "Food Safety", "Creativity", "Time Management"],
+    "riasec_codes": ["R", "A", "E"],
+    "key_traits": {"openness": "high", "conscientiousness": "high"},
+    "aptitude_weights": {"logical": 0.15, "numerical": 0.12, "verbal": 0.23, "spatial": 0.50}
+  },
+  "Airline Pilot": {
+    "required_skills": ["Navigation", "Aviation Safety", "Situational Awareness", "Communication", "Decision Making", "Discipline"],
+    "riasec_codes": ["R", "I", "C"],
+    "key_traits": {"conscientiousness": "high", "neuroticism": "low"},
+    "aptitude_weights": {"logical": 0.22, "numerical": 0.26, "verbal": 0.18, "spatial": 0.34}
+  }
+}

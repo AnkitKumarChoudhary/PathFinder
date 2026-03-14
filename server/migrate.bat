@@ -1,0 +1,9 @@
+@echo off
+cd /d c:\Users\akc24\career-counselling-portal\server
+echo Installing dependencies...
+call npm install
+echo Generating Prisma Client...
+call npx prisma generate
+echo Running Migration...
+call npx prisma migrate dev --name initial_schema
+echo Done.

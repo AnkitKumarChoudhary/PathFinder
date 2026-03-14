@@ -1,0 +1,261 @@
+export const engineeringCareers = [
+  {
+    title: 'Software Engineer',
+    slug: 'software-engineer',
+    shortDescription: 'Design, develop, and maintain software systems and applications.',
+    description: 'Software Engineers are the architects of the digital world. They design, develop, test, and maintain software applications and systems that power modern technology. In India, software engineering is a highly sought-after career due to the booming IT industry and global demand for tech talent. Roles span across frontend, backend, full-stack, mobile app development, and systems engineering. The career offers tremendous growth opportunities, high compensation, and the flexibility to work across various domains like edtech, fintech, healthtech, and e-commerce.',
+    category: 'Engineering & Technology',
+    averageSalary: { entry: 600000, mid: 1500000, senior: 3500000 },
+    requiredSkills: ['Programming', 'Data Structures', 'System Design', 'Problem Solving', 'Git'],
+    requiredEducation: ["B.Tech/B.E. in CSE/IT", "BCA/MCA", "B.Sc/M.Sc in Computer Science"],
+    eligibility: '10+2 with Physics, Chemistry, and Mathematics (PCM). Minimum 60% aggregate in 12th board exams for most top engineering colleges.',
+    entranceExams: ['JEE Main', 'JEE Advanced', 'BITSAT', 'VITEEE', 'MHT CET'],
+    topColleges: ['IIT Bombay', 'IIT Delhi', 'IIT Madras', 'BITS Pilani', 'NIT Trichy', 'IIIT Hyderabad'],
+    topCompanies: ['Google', 'Microsoft', 'Amazon', 'Flipkart', 'Infosys', 'TCS', 'Wipro'],
+    growthOutlook: 'Very High',
+    demandLevel: 'Very High',
+    workLifeBalance: 7,
+    jobSatisfaction: 8,
+    dayInLife: 'A typical day involves attending daily stand-up meetings, writing and reviewing code, debugging issues, collaborating with product managers and designers, and continuous learning of new technologies.',
+    riasecCodes: ['I', 'R', 'C'],
+    roadmapSteps: [
+      {
+        step: 1,
+        title: 'Foundation (Class 9-10)',
+        description: 'Focus on mathematics and science fundamentals. Start basic coding with Python or Scratch.',
+        duration: '2 years',
+        skills: ['Mathematics', 'Logical Thinking', 'Basic Coding'],
+        resources: ['NCERT Textbooks', 'Khan Academy', 'Codecademy']
+      },
+      {
+        step: 2,
+        title: 'Preparation (Class 11-12)',
+        description: 'Choose Science stream with PCM. Prepare for JEE Main/Advanced. Build small programming projects.',
+        duration: '2 years',
+        skills: ['Physics', 'Chemistry', 'Mathematics', 'Programming'],
+        resources: ['JEE coaching material', 'LeetCode', 'freeCodeCamp']
+      },
+      {
+        step: 3,
+        title: 'Education (B.Tech/BE)',
+        description: 'Pursue Computer Science or IT from a reputed institution. Do internships every summer.',
+        duration: '4 years',
+        skills: ['DSA', 'DBMS', 'OS', 'Web Development', 'System Design'],
+        resources: ['College coursework', 'GeeksforGeeks', 'Coursera']
+      },
+      {
+        step: 4,
+        title: 'Early Career',
+        description: 'Join as SDE-1 at a product company or IT services firm. Focus on building expertise.',
+        duration: '2-3 years',
+        skills: ['Full Stack Development', 'Cloud Services', 'Agile'],
+        resources: ['On-the-job learning', 'Tech blogs', 'Open source']
+      },
+      {
+        step: 5,
+        title: 'Growth & Specialization',
+        description: 'Move to SDE-2/Senior roles. Specialize in a domain (AI, Cloud, Security). Consider MS/MBA.',
+        duration: 'Ongoing',
+        skills: ['Architecture', 'Leadership', 'Specialization'],
+        resources: ['Conferences', 'Research papers', 'Mentorship']
+      }
+    ]
+  },
+  {
+    title: 'Data Scientist',
+    slug: 'data-scientist',
+    shortDescription: 'Analyze complex data to help companies make better decisions.',
+    description: 'Data Scientists extract actionable insights from vast amounts of structured and unstructured data using statistics, machine learning, and programming. It is one of the fastest-growing careers in India, driven by the increasing need for data-driven decision-making in businesses. They use tools like Python, R, SQL, and machine learning libraries to build predictive models, discover patterns, and create data visualizations. The role requires a strong foundation in mathematics and statistics, along with domain expertise to interpret results effectively.',
+    category: 'Engineering & Technology',
+    averageSalary: { entry: 800000, mid: 1800000, senior: 4000000 },
+    requiredSkills: ['Python/R', 'Machine Learning', 'Statistics', 'SQL', 'Data Visualization'],
+    requiredEducation: ["B.Tech/B.E. in CSE/Data Science", "B.Stat/M.Stat", "B.Sc/M.Sc Statistics"],
+    eligibility: '10+2 with Mathematics. Background in Computer Science or Statistics is highly preferred.',
+    entranceExams: ['JEE Main', 'JEE Advanced', 'ISI Admission Test', 'GATE (for Masters)'],
+    topColleges: ['ISI Kolkata', 'IIT Bombay', 'IIT Kanpur', 'CMI Chennai', 'BITS Pilani'],
+    topCompanies: ['Fractal Analytics', 'Mu Sigma', 'Amazon', 'Walmart Labs', 'Swiggy', 'Zomato'],
+    growthOutlook: 'Very High',
+    demandLevel: 'Very High',
+    workLifeBalance: 8,
+    jobSatisfaction: 8,
+    dayInLife: 'Data scientists spend their days cleaning and exploring datasets, building machine learning models, running A/B tests, and presenting their findings to stakeholders through dashboards and reports.',
+    riasecCodes: ['I', 'R', 'C'],
+    roadmapSteps: [
+      {
+        step: 1,
+        title: 'Foundation (Class 9-10)',
+        description: 'Develop strong mathematical skills, particularly in algebra and probability.',
+        duration: '2 years',
+        skills: ['Mathematics', 'Analytical Thinking'],
+        resources: ['NCERT Textbooks', 'Khan Academy']
+      },
+      {
+        step: 2,
+        title: 'Preparation (Class 11-12)',
+        description: 'Opt for Science with PCM. Focus heavily on Statistics and Probability. Learn basic Python.',
+        duration: '2 years',
+        skills: ['Statistics', 'Python basics'],
+        resources: ['Kaggle intro courses', 'YouTube tutorials']
+      },
+      {
+        step: 3,
+        title: 'Education (Undergraduate)',
+        description: 'Pursue a degree in CS, Stats, or Data Science. Work on data projects and Kaggle competitions.',
+        duration: '3-4 years',
+        skills: ['Machine Learning', 'SQL', 'Data Wrangling'],
+        resources: ['Coursera', 'Kaggle', 'Fast.ai']
+      },
+      {
+        step: 4,
+        title: 'Early Career',
+        description: 'Start as a Data Analyst or Junior Data Scientist. Focus on bringing value through data insights.',
+        duration: '2-3 years',
+        skills: ['Business Acumen', 'Model Deployment', 'Communication'],
+        resources: ['Medium blogs', 'Towards Data Science']
+      },
+      {
+        step: 5,
+        title: 'Advanced Roles',
+        description: 'Become a Senior Data Scientist or Lead. Specialize in NLP, Computer Vision, or ML Ops.',
+        duration: 'Ongoing',
+        skills: ['Deep Learning', 'Leadership', 'Big Data Architecture'],
+        resources: ['Research papers', 'Advanced certifications']
+      }
+    ]
+  },
+  {
+    title: 'AI/ML Engineer',
+    slug: 'ai-ml-engineer',
+    shortDescription: 'Build AI models and integrate them into production applications.',
+    description: 'AI/ML Engineers bridge the gap between Data Science and Software Engineering. They take machine learning models created by data scientists and deploy them into production environments so they can be used by end applications. Given the AI boom, this role has seen astronomical growth in India. They work with frameworks like TensorFlow, PyTorch, and deploying on AWS/GCP/Azure. They must ensure models are scalable, efficient, and robust.',
+    category: 'Engineering & Technology',
+    averageSalary: { entry: 1000000, mid: 2200000, senior: 5000000 },
+    requiredSkills: ['Python', 'Deep Learning', 'PyTorch/TensorFlow', 'MLOps', 'Cloud Computing'],
+    requiredEducation: ["B.Tech/B.E. in CS/AI", "M.Tech in AI/ML"],
+    eligibility: '10+2 with PCM. Strong background in programming and mathematics algorithms.',
+    entranceExams: ['JEE Main', 'JEE Advanced', 'GATE CS'],
+    topColleges: ['IIT Hyderabad', 'IIT Madras', 'IIIT Hyderabad', 'BITS Pilani', 'NIT Surathkal'],
+    topCompanies: ['Google AI', 'Microsoft Research', 'NVIDIA', 'OpenAI (Global)', 'TCS Research', 'Ola Krutrim'],
+    growthOutlook: 'Exponential',
+    demandLevel: 'Very High',
+    workLifeBalance: 7,
+    jobSatisfaction: 9,
+    dayInLife: 'Optimizing and training neural networks, designing APIs to serve models, monitoring model performance in production, and reading the latest AI research papers to implement state-of-the-art architectures.',
+    riasecCodes: ['I', 'R'],
+    roadmapSteps: [
+      { step: 1, title: 'Foundation', description: 'Strong math & basic coding.', duration: '2 yrs', skills: ['Math'], resources: [] },
+      { step: 2, title: 'Preparation', description: 'PCM + Advanced Math.', duration: '2 yrs', skills: ['Calculus', 'Linear Algebra'], resources: [] },
+      { step: 3, title: 'BTech', description: 'CS Degree focusing on AI.', duration: '4 yrs', skills: ['ML', 'DL', 'Python'], resources: [] },
+      { step: 4, title: 'Early Career', description: 'ML Engineer roles.', duration: '2-4 yrs', skills: ['MLOps', 'Cloud'], resources: [] },
+      { step: 5, title: 'Senior', description: 'Lead AI initiatives.', duration: 'Ongoing', skills: ['Architecture'], resources: [] }
+    ]
+  },
+  {
+    title: 'Cybersecurity Analyst',
+    slug: 'cybersecurity-analyst',
+    shortDescription: 'Protect IT infrastructure and networks from cyber threats.',
+    description: 'Cybersecurity Analysts protect organizations from digital attacks, data breaches, and vulnerabilities. With India digitizing rapidly, cybersecurity has become a critical national and corporate priority. They monitor networks, investigate security alerts, perform penetration testing, and implement security protocols. The role requires staying one step ahead of hackers and understanding complex network architectures.',
+    category: 'Engineering & Technology',
+    averageSalary: { entry: 500000, mid: 1200000, senior: 2500000 },
+    requiredSkills: ['Network Security', 'Ethical Hacking', 'Risk Management', 'Linux/Unix', 'SIEM'],
+    requiredEducation: ["B.Tech/B.E. in CS/IT", "B.Sc in Cyber Security", "Certifications (CEH, CISSP)"],
+    eligibility: '10+2 with Science or Commerce (with Math). Certifications are highly valued alongside degrees.',
+    entranceExams: ['JEE Main', 'State CETs', 'University specific exams'],
+    topColleges: ['IIT Kanpur', 'IIIT Delhi', 'Amrita Vishwa Vidyapeetham', 'SRM University'],
+    topCompanies: ['Palo Alto Networks', 'CrowdStrike', 'TCS Cyber Security', 'Wipro', 'QuickHeal', 'Banks/Fintechs'],
+    growthOutlook: 'High',
+    demandLevel: 'High',
+    workLifeBalance: 6,
+    jobSatisfaction: 8,
+    dayInLife: 'Monitoring security dashboards, investigating suspicious activities, applying security patches, conducting vulnerability assessments, and writing incident reports.',
+    riasecCodes: ['I', 'R', 'C'],
+    roadmapSteps: [
+      { step: 1, title: 'Foundation', description: 'Basic computer literacy.', duration: '2 yrs', skills: ['IT basic'], resources: [] },
+      { step: 2, title: 'Preparation', description: 'Learn networking basics.', duration: '2 yrs', skills: ['Networks'], resources: [] },
+      { step: 3, title: 'Education', description: 'BTech + CEH cert.', duration: '4 yrs', skills: ['Ethical Hacking'], resources: [] },
+      { step: 4, title: 'Early Career', description: 'SOC Analyst.', duration: '2 yrs', skills: ['SIEM'], resources: [] },
+      { step: 5, title: 'Advanced', description: 'CISO / Security Architect.', duration: 'Ongoing', skills: ['Leadership', 'CISSP'], resources: [] }
+    ]
+  },
+  {
+    title: 'Cloud Architect',
+    slug: 'cloud-architect',
+    shortDescription: 'Design and manage organizations cloud computing strategy and infrastructure.',
+    description: 'Cloud Architects oversee a company\'s cloud computing strategy, including cloud adoption plans, cloud application design, and cloud management and monitoring. They work with platforms like Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP). In India\'s startup ecosystem, migrating and maintaining scalable cloud infrastructure is a critical requirement.',
+    category: 'Engineering & Technology',
+    averageSalary: { entry: 800000, mid: 2000000, senior: 4500000 },
+    requiredSkills: ['AWS/Azure/GCP', 'DevOps', 'Microservices', 'Kubernetes', 'Networking'],
+    requiredEducation: ["B.Tech/B.E. in CS/IT", "Cloud Certifications"],
+    eligibility: 'Typically requires an engineering background and significant software development or sysadmin experience.',
+    entranceExams: ['JEE Main', 'State CETs'],
+    topColleges: ['IITs', 'NITs', 'BITS Pilani'],
+    topCompanies: ['Amazon (AWS)', 'Microsoft', 'Google', 'Accenture', 'Cognizant'],
+    growthOutlook: 'Very High',
+    demandLevel: 'High',
+    workLifeBalance: 7,
+    jobSatisfaction: 8,
+    dayInLife: 'Designing cloud infrastructure, estimating costs, setting up CI/CD pipelines, and ensuring high availability and disaster recovery for enterprise applications.',
+    riasecCodes: ['I', 'E', 'C'],
+    roadmapSteps: [
+      { step: 1, title: 'Foundation', description: 'Basic computer literacy.', duration: '2 yrs', skills: ['IT basic'], resources: [] },
+      { step: 2, title: 'Preparation', description: 'Basic coding.', duration: '2 yrs', skills: ['Coding'], resources: [] },
+      { step: 3, title: 'Education', description: 'BTech CS/IT.', duration: '4 yrs', skills: ['OS', 'Networks'], resources: [] },
+      { step: 4, title: 'Early Career', description: 'Cloud/DevOps Engineer.', duration: '3 yrs', skills: ['AWS/Azure', 'Docker'], resources: [] },
+      { step: 5, title: 'Advanced', description: 'Cloud Architect role.', duration: 'Ongoing', skills: ['System Design'], resources: [] }
+    ]
+  },
+  {
+    title: 'Mechanical Engineer',
+    slug: 'mechanical-engineer',
+    shortDescription: 'Design, develop, and build mechanical devices and systems.',
+    description: 'Mechanical Engineers design and build mechanical systems ranging from tiny medical devices to massive power plants and automobiles. In India, opportunities exist in automotive (EVs are booming), manufacturing, aerospace, and energy sectors. The field uses CAD/CAM software for design and requires strong fundamentals in thermodynamics, mechanics, and materials science.',
+    category: 'Engineering & Technology',
+    averageSalary: { entry: 400000, mid: 1000000, senior: 2500000 },
+    requiredSkills: ['AutoCAD/SolidWorks', 'Thermodynamics', 'Mechanics', 'Manufacturing Processes', 'Problem Solving'],
+    requiredEducation: ["B.Tech/B.E. in Mechanical Engineering", "Diploma in Mechanical Engg"],
+    eligibility: '10+2 with PCM.',
+    entranceExams: ['JEE Main', 'JEE Advanced', 'GATE (for PSU/MTech)'],
+    topColleges: ['IIT Bombay', 'IIT Madras', 'IIT Roorkee', 'NIT Surathkal', 'College of Engineering Pune (COEP)'],
+    topCompanies: ['Tata Motors', 'Mahindra & Mahindra', 'L&T', 'DRDO', 'ISRO', 'Maruti Suzuki', 'Ashok Leyland'],
+    growthOutlook: 'Moderate',
+    demandLevel: 'Steady',
+    workLifeBalance: 7,
+    jobSatisfaction: 7,
+    dayInLife: 'Creating CAD models, analyzing stress/thermal properties using simulation software, testing prototypes in labs, and visiting manufacturing floors to oversee production.',
+    riasecCodes: ['R', 'I', 'P'],
+    roadmapSteps: [
+      { step: 1, title: 'Foundation', description: 'Basic physics.', duration: '2 yrs', skills: ['Physics'], resources: [] },
+      { step: 2, title: 'Preparation', description: 'PCM focus.', duration: '2 yrs', skills: ['Math', 'Physics'], resources: [] },
+      { step: 3, title: 'Education', description: 'BTech Mechanical.', duration: '4 yrs', skills: ['CAD', 'Thermodynamics'], resources: [] },
+      { step: 4, title: 'Early Career', description: 'Junior Engineer / Trainee.', duration: '2-3 yrs', skills: ['Manufacturing'], resources: [] },
+      { step: 5, title: 'Advanced', description: 'Senior Engineer / Plant Head.', duration: 'Ongoing', skills: ['Management'], resources: [] }
+    ]
+  },
+  {
+    title: 'Civil Engineer',
+    slug: 'civil-engineer',
+    shortDescription: 'Design and oversee the construction of infrastructure projects.',
+    description: 'Civil Engineers design, build, and maintain the foundation of our modern society – roads, bridges, dams, buildings, and water supply systems. With India\'s massive infrastructure push (smart cities, highways, metros), civil engineering offers steady employment. The job involves site management, structural design, and working with materials like concrete and steel.',
+    category: 'Engineering & Technology',
+    averageSalary: { entry: 350000, mid: 900000, senior: 2400000 },
+    requiredSkills: ['AutoCAD', 'Structural Analysis', 'Project Management', 'Surveying', 'STAAD.Pro'],
+    requiredEducation: ["B.Tech/B.E. in Civil Engineering", "Diploma in Civil Engg"],
+    eligibility: '10+2 with PCM.',
+    entranceExams: ['JEE Main', 'JEE Advanced', 'GATE (for PSU/MTech)'],
+    topColleges: ['IIT Roorkee', 'IIT Delhi', 'IIT Bombay', 'NIT Trichy', 'Jadavpur University'],
+    topCompanies: ['L&T Construction', 'Tata Projects', 'Shapoorji Pallonji', 'Gammon India', 'NHAI', 'CPWD'],
+    growthOutlook: 'Steady',
+    demandLevel: 'High',
+    workLifeBalance: 6,
+    jobSatisfaction: 7,
+    dayInLife: 'Reviewing blueprints, visiting construction sites to monitor progress and safety, coordinating with architects and contractors, and preparing cost estimates.',
+    riasecCodes: ['R', 'I', 'E'],
+    roadmapSteps: [
+      { step: 1, title: 'Foundation', description: 'Basic physics/math.', duration: '2 yrs', skills: ['Physics'], resources: [] },
+      { step: 2, title: 'Preparation', description: 'PCM focus.', duration: '2 yrs', skills: ['Math'], resources: [] },
+      { step: 3, title: 'Education', description: 'BTech Civil.', duration: '4 yrs', skills: ['Structural Design', 'AutoCAD'], resources: [] },
+      { step: 4, title: 'Early Career', description: 'Site Engineer.', duration: '3 yrs', skills: ['Execution', 'Site Management'], resources: [] },
+      { step: 5, title: 'Advanced', description: 'Project Manager / Structural Designer.', duration: 'Ongoing', skills: ['Project Management'], resources: [] }
+    ]
+  }
+];

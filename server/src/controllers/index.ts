@@ -1,1 +1,1 @@
-// TODO: Implement in upcoming phases
+export * from './auth.controller';

@@ -1,0 +1,15 @@
+time="2026-03-12T22:41:44+05:30" level=warning msg="c:\\Users\\akc24\\career-counselling-portal\\docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Container cc_redis Stopping 
+ Container cc_postgres Stopping 
+ Container cc_redis Stopped 
+ Container cc_redis Removing 
+ Container cc_redis Removed 
+ Container cc_postgres Stopped 
+ Container cc_postgres Removing 
+ Container cc_postgres Removed 
+ Volume career-counselling-portal_postgres_data Removing 
+ Volume career-counselling-portal_redis_data Removing 
+ Network career-counselling-portal_default Removing 
+ Volume career-counselling-portal_postgres_data Removed 
+ Volume career-counselling-portal_redis_data Removed 
+ Network career-counselling-portal_default Removed 

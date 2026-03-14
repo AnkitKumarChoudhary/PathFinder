@@ -1,0 +1,12 @@
+Environment variables loaded from .env
+Running seed command `tsx prisma/seed.ts` ...
+Seeding Database...
+Seeding Complete!
+- Users seeded: 10
+- Careers seeded: 34
+- Assessments seeded: 3
+- Questions seeded: 18
+- Resources seeded: 20
+- Appointments seeded: 3
+
+The seed command has been executed.
